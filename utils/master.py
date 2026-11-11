@@ -190,8 +190,6 @@ class Master:
             resp = self.do_query(method='POST',url=self.urls["query_seats"],data=data,toJson=True)
             if resp is None:
                 self.__queryRooms()
-            if self.seats_query_flag:
-                return
             self.rooms[room]["floors"] = {x["roomName"]:x for x in resp["allContent"]["children"][2]["children"]["children"]}
             for floor in self.rooms[room]["floors"].keys():
                 self.rooms[room]["floors"][floor]["seats"] = self.rooms[room]["floors"][floor]["seatMap"]["POIs"]
