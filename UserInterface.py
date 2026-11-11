@@ -87,7 +87,7 @@ class UserInterface:
                 while self.th.is_alive():
                     sleep(0.1)
             numRooms = len(self.master.rooms)
-            
+            print("当前楼层信息：", self.master.getRoomDetails())
             for _plan in mPlans:
                 roomName = _plan[0] # roomType
                 if roomName < 1 or roomName > numRooms:
