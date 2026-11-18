@@ -2,7 +2,7 @@ name: HDU-Library-Master
 on:
   schedule:
     - cron: '25 19 * * *'
-    - timezone: 'Asia/Shanghai'
+      timezone: 'Asia/Shanghai'
   workflow_dispatch:
 jobs:
   build:
